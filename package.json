@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "node --test tests/*.test.js",
-    "check": "node scripts/check-syntax.js"
+    "check": "node scripts/check-syntax.js",
+    "package:lambda": "mkdir -p dist && zip -r dist/whatsapp-agent.zip package.json src -x \"*.DS_Store\""
   },
   "keywords": [
     "whatsapp",

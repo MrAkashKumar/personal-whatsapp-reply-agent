@@ -4,6 +4,20 @@ A small, maintainable starter repo for a WhatsApp Business Cloud API webhook tha
 
 Important: this project is for the official WhatsApp Business Platform / Cloud API with a business phone number. WhatsApp does not provide an official API for automating a normal personal WhatsApp account.
 
+## Documentation Map
+
+Use this section to jump to the right guide.
+
+| Need | Document |
+| --- | --- |
+| Understand what this app does | [Use cases](docs/USE_CASES.md) |
+| Product requirements and roadmap | [PRD](docs/PRD.md) |
+| Run the project locally | [Local run guide](docs/LOCAL_RUN_GUIDE.md) |
+| Test WhatsApp webhooks locally with ngrok | [ngrok guide](docs/NGROK_GUIDE.md) |
+| Create Meta WhatsApp token, verify token, and phone number ID | [Meta WhatsApp credentials](docs/META_WHATSAPP_CREDENTIALS.md) |
+| Deploy to AWS Lambda and API Gateway | [AWS deployment guide](docs/AWS_DEPLOYMENT.md) |
+| General setup notes | [Setup guide](docs/SETUP.md) |
+
 ## What This Does
 
 - Receives inbound WhatsApp webhook events.
@@ -45,6 +59,7 @@ flowchart LR
 npm test
 npm run check
 npm start
+npm run package:lambda
 ```
 
 7. Expose your local server with a tunnel such as ngrok or Cloudflare Tunnel:
@@ -111,6 +126,8 @@ npm start
 - `docs/LOCAL_RUN_GUIDE.md` - exact local commands for running and testing.
 - `docs/META_WHATSAPP_CREDENTIALS.md` - where to get WhatsApp token, verify token, and phone number ID.
 - `docs/USE_CASES.md` - plain-English app description and step-by-step use cases.
+- `docs/NGROK_GUIDE.md` - why ngrok is used and how to start it.
+- `docs/AWS_DEPLOYMENT.md` - complete AWS Lambda and API Gateway deployment steps.
 
 ## Compliance Notes
 
