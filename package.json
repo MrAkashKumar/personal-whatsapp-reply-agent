@@ -1,0 +1,22 @@
+{
+  "name": "personal-whatsapp-reply-agent",
+  "version": "0.1.0",
+  "description": "A maintainable WhatsApp Cloud API webhook that drafts warm, concise replies with OpenAI.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-syntax.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "openai",
+    "webhook",
+    "aws-lambda"
+  ],
+  "license": "UNLICENSED"
+}
