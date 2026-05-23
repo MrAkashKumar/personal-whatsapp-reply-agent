@@ -11,6 +11,8 @@ Use this section to jump to the right guide.
 | Need | Document |
 | --- | --- |
 | Senior architect guide: best users, local setup, OS commands, deployment path | [Architect local/deployment guide](docs/ARCHITECT_LOCAL_DEPLOYMENT_GUIDE.md) |
+| Watch iPhone 13 Tarus real-time reply demo | [iPhone Tarus screen recording demo](docs/IPHONE_TARUS_SCREEN_RECORDING_DEMO.md) |
+| Watch Hindi Tarus bakchodi demo | [iPhone Tarus Hindi bakchodi demo](docs/IPHONE_TARUS_HINDI_BAKCHODI_DEMO.md) |
 | See the visual workflow image | [Visual overview](docs/VISUAL_OVERVIEW.md) |
 | See real-time individual and group examples | [Real-time examples](docs/REALTIME_EXAMPLES.md) |
 | Understand what this app does | [Use cases](docs/USE_CASES.md) |
@@ -152,6 +154,24 @@ OS-specific guide: [Architect local/deployment guide](docs/ARCHITECT_LOCAL_DEPLO
 
 ## Real-Time Examples
 
+Friend demo on iPhone 13:
+
+![iPhone 13 Tarus real-time reply demo](docs/assets/iphone13-tarus-realtime-demo.gif)
+
+Hindi/Hinglish bakchodi friend demo:
+
+![iPhone 13 Tarus Hindi bakchodi demo](docs/assets/iphone13-tarus-hindi-bakchodi-demo.gif)
+
+Video files:
+
+- [MOV screen recording](docs/assets/iphone13-tarus-realtime-demo.mov)
+- [M4V screen recording](docs/assets/iphone13-tarus-realtime-demo.m4v)
+- [Hindi MOV screen recording](docs/assets/iphone13-tarus-hindi-bakchodi-demo.mov)
+- [Hindi M4V screen recording](docs/assets/iphone13-tarus-hindi-bakchodi-demo.m4v)
+
+For the exact Tarus scenario, read [iPhone Tarus screen recording demo](docs/IPHONE_TARUS_SCREEN_RECORDING_DEMO.md).
+For the Hindi/Hinglish version, read [iPhone Tarus Hindi bakchodi demo](docs/IPHONE_TARUS_HINDI_BAKCHODI_DEMO.md).
+
 Individual normal message:
 
 ![Individual normal chat flow](docs/assets/realtime-individual-normal.svg)
@@ -277,6 +297,16 @@ npm start
 - `src/agent/replyAgent.js` - OpenAI Responses API call.
 - `src/whatsapp/webhook.js` - Meta webhook parsing.
 - `src/whatsapp/client.js` - WhatsApp Cloud API sender.
+- `docs/IPHONE_TARUS_SCREEN_RECORDING_DEMO.md` - 30-60 second iPhone-style Tarus demo.
+- `docs/IPHONE_TARUS_HINDI_BAKCHODI_DEMO.md` - 30-60 second Hindi/Hinglish Tarus demo.
+- `docs/assets/iphone13-tarus-realtime-demo.gif` - animated iPhone 13 WhatsApp-style demo.
+- `docs/assets/iphone13-tarus-realtime-demo.mov` - generated screen recording video.
+- `docs/assets/iphone13-tarus-realtime-demo.m4v` - generated shareable video.
+- `docs/assets/iphone13-tarus-realtime-poster.png` - static preview for the demo.
+- `docs/assets/iphone13-tarus-hindi-bakchodi-demo.gif` - animated Hindi/Hinglish demo.
+- `docs/assets/iphone13-tarus-hindi-bakchodi-demo.mov` - generated Hindi/Hinglish screen recording video.
+- `docs/assets/iphone13-tarus-hindi-bakchodi-demo.m4v` - generated Hindi/Hinglish shareable video.
+- `docs/assets/iphone13-tarus-hindi-bakchodi-poster.png` - static Hindi/Hinglish preview.
 - `docs/VISUAL_OVERVIEW.md` - visual explanation of how the app works.
 - `docs/assets/whatsapp-agent-flow.svg` - README workflow image.
 - `docs/REALTIME_EXAMPLES.md` - real-time individual and group behavior examples.
