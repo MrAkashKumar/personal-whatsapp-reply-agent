@@ -10,6 +10,7 @@ Use this section to jump to the right guide.
 
 | Need | Document |
 | --- | --- |
+| Senior architect guide: best users, local setup, OS commands, deployment path | [Architect local/deployment guide](docs/ARCHITECT_LOCAL_DEPLOYMENT_GUIDE.md) |
 | See the visual workflow image | [Visual overview](docs/VISUAL_OVERVIEW.md) |
 | See real-time individual and group examples | [Real-time examples](docs/REALTIME_EXAMPLES.md) |
 | Understand what this app does | [Use cases](docs/USE_CASES.md) |
@@ -45,6 +46,22 @@ Group chat behavior:
 ![Group chat behavior flow](docs/assets/realtime-group-behavior.svg)
 
 For exact scenarios and reply examples, read [Real-time examples](docs/REALTIME_EXAMPLES.md).
+
+## Who Should Use It and How to Run It
+
+Best-fit users:
+
+![Best users for this application](docs/assets/audience-fit.svg)
+
+Cross-platform local setup:
+
+![Cross-platform local setup](docs/assets/cross-platform-local-setup.svg)
+
+Local-to-cloud deployment path:
+
+![Local to cloud deployment path](docs/assets/local-to-cloud-path.svg)
+
+For exact macOS, Windows, Linux, ngrok, and AWS steps, read [Architect local/deployment guide](docs/ARCHITECT_LOCAL_DEPLOYMENT_GUIDE.md).
 
 ## Architecture
 
@@ -154,6 +171,10 @@ npm start
 - `docs/USE_CASES.md` - plain-English app description and step-by-step use cases.
 - `docs/NGROK_GUIDE.md` - why ngrok is used and how to start it.
 - `docs/AWS_DEPLOYMENT.md` - complete AWS Lambda and API Gateway deployment steps.
+- `docs/ARCHITECT_LOCAL_DEPLOYMENT_GUIDE.md` - best users, OS-specific local setup, and deployment path.
+- `docs/assets/audience-fit.svg` - best-fit user image.
+- `docs/assets/cross-platform-local-setup.svg` - macOS, Windows, Linux setup image.
+- `docs/assets/local-to-cloud-path.svg` - local-to-AWS deployment image.
 
 ## Compliance Notes
 

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="860" viewBox="0 0 1500 860" role="img" aria-labelledby="title desc">
+  <title id="title">Best Users for the WhatsApp Reply Agent</title>
+  <desc id="desc">A visual guide showing who should use this app, who should avoid it, and the main decision rule.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .card { fill: #ffffff; stroke: #d7dce6; stroke-width: 2; }
+      .good { fill: #ecf8f0; stroke: #18794e; stroke-width: 2.5; }
+      .warn { fill: #fff7df; stroke: #a15c00; stroke-width: 2.5; }
+      .bad { fill: #fff1f0; stroke: #b42318; stroke-width: 2.5; }
+      .title { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 42px; font-weight: 700; }
+      .subtitle { fill: #475467; font-family: Arial, Helvetica, sans-serif; font-size: 21px; }
+      .label { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 25px; font-weight: 700; }
+      .body { fill: #344054; font-family: Arial, Helvetica, sans-serif; font-size: 19px; }
+      .small { fill: #667085; font-family: Arial, Helvetica, sans-serif; font-size: 16px; }
+      .pill { fill: #1f2a44; }
+      .pillText { fill: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; }
+      .arrow { stroke: #344054; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#344054" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1500" height="860" />
+  <text class="title" x="70" y="80">Who Should Use This Application?</text>
+  <text class="subtitle" x="70" y="118">Best fit: people who need fast, polite first responses on an official WhatsApp Business number.</text>
+
+  <rect class="good" x="70" y="170" width="410" height="470" rx="22" />
+  <text class="label" x="110" y="225">Best Fit</text>
+  <rect class="pill" x="110" y="255" width="130" height="32" rx="16" />
+  <text class="pillText" x="132" y="277">USE THIS</text>
+  <text class="body" x="110" y="330">Solo professionals</text>
+  <text class="body" x="110" y="370">Freelancers and consultants</text>
+  <text class="body" x="110" y="410">Founders and small teams</text>
+  <text class="body" x="110" y="450">Customer support pilots</text>
+  <text class="body" x="110" y="490">Lead capture and first reply</text>
+  <text class="body" x="110" y="530">Busy operators who miss chats</text>
+  <text class="small" x="110" y="590">Goal: acknowledge quickly, then</text>
+  <text class="small" x="110" y="615">let a human take over when needed.</text>
+
+  <rect class="warn" x="545" y="170" width="410" height="470" rx="22" />
+  <text class="label" x="585" y="225">Use Carefully</text>
+  <rect class="pill" x="585" y="255" width="165" height="32" rx="16" />
+  <text class="pillText" x="607" y="277">HUMAN REVIEW</text>
+  <text class="body" x="585" y="330">Money or payment requests</text>
+  <text class="body" x="585" y="370">Medical, legal, finance topics</text>
+  <text class="body" x="585" y="410">Hiring or contract decisions</text>
+  <text class="body" x="585" y="450">Relationship conflict</text>
+  <text class="body" x="585" y="490">OTP, passwords, bank details</text>
+  <text class="small" x="585" y="570">Safe behavior: short acknowledgement,</text>
+  <text class="small" x="585" y="595">then the owner replies personally.</text>
+
+  <rect class="bad" x="1020" y="170" width="410" height="470" rx="22" />
+  <text class="label" x="1060" y="225">Not a Fit</text>
+  <rect class="pill" x="1060" y="255" width="140" height="32" rx="16" />
+  <text class="pillText" x="1084" y="277">DO NOT USE</text>
+  <text class="body" x="1060" y="330">Personal WhatsApp scraping</text>
+  <text class="body" x="1060" y="370">Unofficial browser automation</text>
+  <text class="body" x="1060" y="410">Spam or mass marketing</text>
+  <text class="body" x="1060" y="450">Hidden high-risk decisions</text>
+  <text class="body" x="1060" y="490">Uncontrolled group auto-replies</text>
+  <text class="small" x="1060" y="570">Use the official WhatsApp Business</text>
+  <text class="small" x="1060" y="595">Cloud API path instead.</text>
+
+  <rect class="card" x="250" y="700" width="1000" height="88" rx="18" />
+  <text class="label" x="300" y="754">Architect Rule:</text>
+  <text class="body" x="495" y="754">Automate first response, not personal judgement.</text>
+</svg>

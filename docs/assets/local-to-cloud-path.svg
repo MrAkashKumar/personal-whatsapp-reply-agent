@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Local to Cloud Deployment Path</title>
+  <desc id="desc">A deployment path showing local dry run, ngrok testing, Lambda packaging, AWS Lambda deployment, API Gateway public URL, Meta webhook configuration, and enabling real replies.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .panel { fill: #ffffff; stroke: #d7dce6; stroke-width: 2; }
+      .local { fill: #edf5ff; stroke: #1f5fbf; stroke-width: 2.4; }
+      .test { fill: #fff7df; stroke: #a15c00; stroke-width: 2.4; }
+      .cloud { fill: #ecf8f0; stroke: #18794e; stroke-width: 2.4; }
+      .live { fill: #fff1f0; stroke: #b42318; stroke-width: 2.4; }
+      .title { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 42px; font-weight: 700; }
+      .subtitle { fill: #475467; font-family: Arial, Helvetica, sans-serif; font-size: 21px; }
+      .label { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 23px; font-weight: 700; }
+      .body { fill: #344054; font-family: Arial, Helvetica, sans-serif; font-size: 17px; }
+      .small { fill: #667085; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+      .code { fill: #101828; font-family: Consolas, Menlo, monospace; font-size: 14px; }
+      .circle { fill: #1f2a44; }
+      .num { fill: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 17px; font-weight: 700; }
+      .arrow { stroke: #344054; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .arrow-green { stroke: #18794e; stroke-width: 3; fill: none; marker-end: url(#arrowhead-green); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#344054" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#18794e" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="900" />
+  <text class="title" x="70" y="78">From Local Machine to AWS Deployment</text>
+  <text class="subtitle" x="70" y="116">Do not jump straight to live sending. Move through dry-run, webhook test, AWS test, then real replies.</text>
+
+  <rect class="panel" x="70" y="165" width="1460" height="600" rx="24" />
+
+  <rect class="local" x="115" y="235" width="245" height="165" rx="18" />
+  <circle class="circle" cx="148" cy="270" r="18" />
+  <text class="num" x="142" y="277">1</text>
+  <text class="label" x="180" y="277">Local Dry Run</text>
+  <text class="code" x="145" y="318">DRY_RUN=true</text>
+  <text class="code" x="145" y="346">npm start</text>
+  <text class="small" x="145" y="377">Reply is logged only.</text>
+
+  <rect class="test" x="420" y="235" width="245" height="165" rx="18" />
+  <circle class="circle" cx="453" cy="270" r="18" />
+  <text class="num" x="447" y="277">2</text>
+  <text class="label" x="485" y="277">ngrok Test</text>
+  <text class="code" x="450" y="318">ngrok http 3000</text>
+  <text class="small" x="450" y="350">Meta calls local app</text>
+  <text class="small" x="450" y="377">through HTTPS URL.</text>
+
+  <rect class="cloud" x="725" y="235" width="245" height="165" rx="18" />
+  <circle class="circle" cx="758" cy="270" r="18" />
+  <text class="num" x="752" y="277">3</text>
+  <text class="label" x="790" y="277">Package</text>
+  <text class="code" x="755" y="318">npm run package:lambda</text>
+  <text class="small" x="755" y="350">Creates Lambda zip:</text>
+  <text class="code" x="755" y="377">dist/whatsapp-agent.zip</text>
+
+  <rect class="cloud" x="1030" y="235" width="245" height="165" rx="18" />
+  <circle class="circle" cx="1063" cy="270" r="18" />
+  <text class="num" x="1057" y="277">4</text>
+  <text class="label" x="1095" y="277">AWS Lambda</text>
+  <text class="body" x="1060" y="318">Upload zip</text>
+  <text class="code" x="1060" y="346">src/lambda.handler</text>
+  <text class="small" x="1060" y="377">Add env variables.</text>
+
+  <path class="arrow" d="M360 318 L410 318" />
+  <path class="arrow" d="M665 318 L715 318" />
+  <path class="arrow" d="M970 318 L1020 318" />
+
+  <rect class="cloud" x="265" y="500" width="285" height="165" rx="18" />
+  <circle class="circle" cx="298" cy="535" r="18" />
+  <text class="num" x="292" y="542">5</text>
+  <text class="label" x="330" y="542">API Gateway</text>
+  <text class="body" x="295" y="583">Create routes:</text>
+  <text class="code" x="295" y="611">GET /health</text>
+  <text class="code" x="295" y="638">GET/POST /webhook</text>
+
+  <rect class="test" x="625" y="500" width="285" height="165" rx="18" />
+  <circle class="circle" cx="658" cy="535" r="18" />
+  <text class="num" x="652" y="542">6</text>
+  <text class="label" x="690" y="542">Meta Webhook</text>
+  <text class="body" x="655" y="583">Callback URL:</text>
+  <text class="code" x="655" y="611">https://api.../webhook</text>
+  <text class="small" x="655" y="638">Use same verify token.</text>
+
+  <rect class="live" x="985" y="500" width="285" height="165" rx="18" />
+  <circle class="circle" cx="1018" cy="535" r="18" />
+  <text class="num" x="1012" y="542">7</text>
+  <text class="label" x="1050" y="542">Enable Live</text>
+  <text class="code" x="1015" y="583">DRY_RUN=false</text>
+  <text class="body" x="1015" y="617">Only after tests pass.</text>
+  <text class="small" x="1015" y="644">Real WhatsApp replies sent.</text>
+
+  <path class="arrow-green" d="M1152 400 C1152 460 407 450 407 490" />
+  <path class="arrow" d="M550 582 L615 582" />
+  <path class="arrow" d="M910 582 L975 582" />
+
+  <rect class="panel" x="225" y="800" width="1150" height="55" rx="16" />
+  <text class="body" x="270" y="835">Architect guardrail: every environment starts with DRY_RUN=true, then changes to DRY_RUN=false only after webhook and logs are verified.</text>
+</svg>

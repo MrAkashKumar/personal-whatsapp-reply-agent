@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1020" viewBox="0 0 1600 1020" role="img" aria-labelledby="title desc">
+  <title id="title">Cross-Platform Local Setup Steps</title>
+  <desc id="desc">A cross-platform setup diagram for macOS, Windows, and Linux showing install prerequisites, configure env file, run tests, start server, test health, and optionally start ngrok.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .panel { fill: #ffffff; stroke: #d7dce6; stroke-width: 2; }
+      .mac { fill: #edf5ff; stroke: #1f5fbf; stroke-width: 2.4; }
+      .win { fill: #ecf8f0; stroke: #18794e; stroke-width: 2.4; }
+      .linux { fill: #fff7df; stroke: #a15c00; stroke-width: 2.4; }
+      .step { fill: #ffffff; stroke: #1f2a44; stroke-width: 2; }
+      .circle { fill: #1f2a44; }
+      .title { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 42px; font-weight: 700; }
+      .subtitle { fill: #475467; font-family: Arial, Helvetica, sans-serif; font-size: 21px; }
+      .label { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; }
+      .body { fill: #344054; font-family: Arial, Helvetica, sans-serif; font-size: 18px; }
+      .small { fill: #667085; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+      .num { fill: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; }
+      .code { fill: #101828; font-family: Consolas, Menlo, monospace; font-size: 14px; }
+      .arrow { stroke: #344054; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#344054" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1020" />
+  <text class="title" x="70" y="78">Run Locally on macOS, Windows, or Linux</text>
+  <text class="subtitle" x="70" y="116">Same application, same Node.js runtime, small command differences per operating system.</text>
+
+  <rect class="mac" x="70" y="160" width="455" height="185" rx="20" />
+  <text class="label" x="110" y="212">macOS</text>
+  <text class="body" x="110" y="252">Install Node.js 20+ from nodejs.org</text>
+  <text class="body" x="110" y="285">or use Homebrew if you already use it.</text>
+  <text class="code" x="110" y="322">node -v && npm -v</text>
+
+  <rect class="win" x="572" y="160" width="455" height="185" rx="20" />
+  <text class="label" x="612" y="212">Windows</text>
+  <text class="body" x="612" y="252">Use Node.js LTS installer or winget.</text>
+  <text class="body" x="612" y="285">Run commands in PowerShell.</text>
+  <text class="code" x="612" y="322">node -v; npm -v</text>
+
+  <rect class="linux" x="1075" y="160" width="455" height="185" rx="20" />
+  <text class="label" x="1115" y="212">Linux</text>
+  <text class="body" x="1115" y="252">Use your distro package manager</text>
+  <text class="body" x="1115" y="285">or official Node.js downloads.</text>
+  <text class="code" x="1115" y="322">node -v && npm -v</text>
+
+  <rect class="panel" x="70" y="405" width="1460" height="510" rx="22" />
+  <text class="label" x="110" y="455">Shared local run sequence</text>
+
+  <rect class="step" x="110" y="500" width="210" height="145" rx="16" />
+  <circle class="circle" cx="140" cy="532" r="18" />
+  <text class="num" x="134" y="539">1</text>
+  <text class="label" x="170" y="539">Open Repo</text>
+  <text class="code" x="135" y="585">cd project-folder</text>
+  <text class="small" x="135" y="616">Use the folder where</text>
+  <text class="small" x="135" y="637">this repo exists.</text>
+
+  <rect class="step" x="375" y="500" width="210" height="145" rx="16" />
+  <circle class="circle" cx="405" cy="532" r="18" />
+  <text class="num" x="399" y="539">2</text>
+  <text class="label" x="435" y="539">Create .env</text>
+  <text class="code" x="400" y="585">cp .env.example .env</text>
+  <text class="small" x="400" y="616">Windows uses</text>
+  <text class="small" x="400" y="637">Copy-Item.</text>
+
+  <rect class="step" x="640" y="500" width="210" height="145" rx="16" />
+  <circle class="circle" cx="670" cy="532" r="18" />
+  <text class="num" x="664" y="539">3</text>
+  <text class="label" x="700" y="539">Add Keys</text>
+  <text class="code" x="665" y="585">OPENAI_API_KEY</text>
+  <text class="code" x="665" y="610">WHATSAPP_...</text>
+  <text class="small" x="665" y="637">Keep DRY_RUN=true.</text>
+
+  <rect class="step" x="905" y="500" width="210" height="145" rx="16" />
+  <circle class="circle" cx="935" cy="532" r="18" />
+  <text class="num" x="929" y="539">4</text>
+  <text class="label" x="965" y="539">Verify</text>
+  <text class="code" x="930" y="585">npm test</text>
+  <text class="code" x="930" y="610">npm run check</text>
+  <text class="small" x="930" y="637">Must pass first.</text>
+
+  <rect class="step" x="1170" y="500" width="210" height="145" rx="16" />
+  <circle class="circle" cx="1200" cy="532" r="18" />
+  <text class="num" x="1194" y="539">5</text>
+  <text class="label" x="1230" y="539">Start App</text>
+  <text class="code" x="1195" y="585">npm start</text>
+  <text class="small" x="1195" y="616">Server runs on</text>
+  <text class="code" x="1195" y="637">localhost:3000</text>
+
+  <path class="arrow" d="M320 572 L365 572" />
+  <path class="arrow" d="M585 572 L630 572" />
+  <path class="arrow" d="M850 572 L895 572" />
+  <path class="arrow" d="M1115 572 L1160 572" />
+
+  <rect class="step" x="375" y="720" width="300" height="125" rx="16" />
+  <circle class="circle" cx="405" cy="752" r="18" />
+  <text class="num" x="399" y="759">6</text>
+  <text class="label" x="435" y="759">Health Test</text>
+  <text class="code" x="405" y="800">curl localhost:3000/health</text>
+  <text class="small" x="405" y="828">PowerShell: Invoke-RestMethod</text>
+
+  <rect class="step" x="765" y="720" width="300" height="125" rx="16" />
+  <circle class="circle" cx="795" cy="752" r="18" />
+  <text class="num" x="789" y="759">7</text>
+  <text class="label" x="825" y="759">Webhook Test</text>
+  <text class="code" x="795" y="800">ngrok http 3000</text>
+  <text class="small" x="795" y="828">Only needed for Meta local testing.</text>
+
+  <path class="arrow" d="M1275 645 C1275 690 525 682 525 710" />
+  <path class="arrow" d="M675 782 L755 782" />
+</svg>
