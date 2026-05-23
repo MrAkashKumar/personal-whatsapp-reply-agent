@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Group Chat Behavior Example</title>
+  <desc id="desc">A group chat example showing that the current MVP does not auto-reply in WhatsApp groups through the standard individual-message Cloud API path. It recommends human handling or future official group integration if available.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .panel { fill: #ffffff; stroke: #d7dce6; stroke-width: 2; }
+      .phone { fill: #101828; }
+      .screen { fill: #f2f4f7; }
+      .bubble-in { fill: #ffffff; stroke: #d0d5dd; stroke-width: 1.5; }
+      .bubble-out { fill: #e4e7ec; stroke: #667085; stroke-width: 1.5; }
+      .box { fill: #ffffff; stroke: #1f2a44; stroke-width: 2.2; }
+      .box-gray { fill: #f2f4f7; stroke: #667085; stroke-width: 2.2; }
+      .box-blue { fill: #edf5ff; stroke: #1f5fbf; stroke-width: 2.2; }
+      .box-yellow { fill: #fff7df; stroke: #a15c00; stroke-width: 2.2; }
+      .title { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 36px; font-weight: 700; }
+      .subtitle { fill: #475467; font-family: Arial, Helvetica, sans-serif; font-size: 19px; }
+      .label { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 22px; font-weight: 700; }
+      .body { fill: #344054; font-family: Arial, Helvetica, sans-serif; font-size: 17px; }
+      .small { fill: #667085; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+      .chat { fill: #101828; font-family: Arial, Helvetica, sans-serif; font-size: 16px; }
+      .code { fill: #101828; font-family: Consolas, Menlo, monospace; font-size: 14px; }
+      .arrow { stroke: #344054; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .arrow-yellow { stroke: #a15c00; stroke-width: 3; fill: none; marker-end: url(#arrowhead-yellow); }
+      .dashed { stroke-dasharray: 9 8; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#344054" />
+    </marker>
+    <marker id="arrowhead-yellow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#a15c00" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1400" height="760" />
+  <text class="title" x="58" y="70">Real-Time Example: Group Chat Behavior</text>
+  <text class="subtitle" x="58" y="105">Current MVP is built for one-to-one WhatsApp Cloud API replies. Group handling should be explicit, restricted, and reviewed.</text>
+
+  <rect class="phone" x="70" y="150" width="335" height="520" rx="38" />
+  <rect class="screen" x="92" y="184" width="291" height="452" rx="22" />
+  <rect fill="#344054" x="92" y="184" width="291" height="58" rx="22" />
+  <rect fill="#344054" x="92" y="216" width="291" height="26" />
+  <text fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" x="118" y="221">Project Team</text>
+  <text fill="#e4e7ec" font-family="Arial, Helvetica, sans-serif" font-size="13" x="118" y="238">8 participants</text>
+
+  <rect class="bubble-in" x="112" y="278" width="238" height="86" rx="16" />
+  <text class="small" x="130" y="303">Priya</text>
+  <text class="chat" x="130" y="330">Akash, can you share</text>
+  <text class="chat" x="130" y="353">the deployment status?</text>
+
+  <rect class="bubble-in" x="112" y="386" width="238" height="74" rx="16" />
+  <text class="small" x="130" y="411">Rohit</text>
+  <text class="chat" x="130" y="438">Yes, we need it today.</text>
+
+  <rect class="bubble-out" x="137" y="506" width="228" height="72" rx="16" />
+  <text class="chat" x="155" y="537">No automatic group reply</text>
+  <text class="chat" x="155" y="560">from this MVP.</text>
+
+  <path class="arrow dashed" d="M405 410 L500 410" />
+
+  <rect class="panel" x="510" y="150" width="825" height="520" rx="22" />
+  <text class="label" x="548" y="205">How this project treats groups</text>
+
+  <rect class="box-blue" x="555" y="245" width="245" height="135" rx="14" />
+  <text class="label" x="585" y="288">Current MVP</text>
+  <text class="body" x="585" y="322">Official one-to-one</text>
+  <text class="body" x="585" y="350">reply assistant</text>
+
+  <rect class="box-gray" x="860" y="245" width="245" height="135" rx="14" />
+  <text class="label" x="890" y="288">Group Chat</text>
+  <text class="body" x="890" y="322">Do not auto-send</text>
+  <text class="body" x="890" y="350">without explicit support</text>
+
+  <rect class="box-yellow" x="555" y="455" width="550" height="130" rx="14" />
+  <text class="label" x="585" y="497">Recommended behavior</text>
+  <text class="body" x="585" y="530">Use human review or reply to the person individually.</text>
+  <text class="code" x="585" y="560">"I saw the group message. I’ll update properly shortly."</text>
+
+  <rect class="box" x="1145" y="245" width="145" height="340" rx="14" />
+  <text class="label" x="1170" y="288">Future</text>
+  <text class="body" x="1170" y="322">Add only if</text>
+  <text class="body" x="1170" y="350">your Meta</text>
+  <text class="body" x="1170" y="378">account has</text>
+  <text class="body" x="1170" y="406">official group</text>
+  <text class="body" x="1170" y="434">API access.</text>
+
+  <path class="arrow" d="M800 312 L850 312" />
+  <path class="arrow-yellow" d="M982 380 C982 420 830 420 830 445" />
+  <path class="arrow dashed" d="M1105 312 L1135 312" />
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">WhatsApp Reply Agent Flow</title>
+  <desc id="desc">A visual workflow showing how an incoming WhatsApp message moves through WhatsApp Cloud API, webhook validation, safety checks, OpenAI reply generation, and a WhatsApp reply back to the sender. It also shows local ngrok testing and AWS production deployment.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .panel { fill: #ffffff; stroke: #d7dce6; stroke-width: 2; }
+      .box { fill: #ffffff; stroke: #1f2a44; stroke-width: 2.5; }
+      .box-green { fill: #ecf8f0; stroke: #18794e; stroke-width: 2.5; }
+      .box-blue { fill: #edf5ff; stroke: #1f5fbf; stroke-width: 2.5; }
+      .box-yellow { fill: #fff7df; stroke: #a15c00; stroke-width: 2.5; }
+      .box-red { fill: #fff1f0; stroke: #b42318; stroke-width: 2.5; }
+      .box-gray { fill: #f2f4f7; stroke: #667085; stroke-width: 2.5; }
+      .title { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 42px; font-weight: 700; }
+      .subtitle { fill: #475467; font-family: Arial, Helvetica, sans-serif; font-size: 22px; }
+      .label { fill: #111827; font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; }
+      .body { fill: #344054; font-family: Arial, Helvetica, sans-serif; font-size: 18px; }
+      .small { fill: #475467; font-family: Arial, Helvetica, sans-serif; font-size: 16px; }
+      .step { fill: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; }
+      .step-circle { fill: #1f2a44; }
+      .arrow { stroke: #344054; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .arrow-green { stroke: #18794e; stroke-width: 3; fill: none; marker-end: url(#arrowhead-green); }
+      .arrow-red { stroke: #b42318; stroke-width: 3; fill: none; marker-end: url(#arrowhead-red); }
+      .dashed { stroke-dasharray: 10 9; }
+      .code { fill: #111827; font-family: Consolas, Menlo, monospace; font-size: 15px; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#344054" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#18794e" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#b42318" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="980" />
+
+  <text class="title" x="70" y="75">Personal WhatsApp Reply Agent</text>
+  <text class="subtitle" x="70" y="112">Fast first replies using WhatsApp Cloud API, OpenAI, and a safe human-review path.</text>
+
+  <rect class="panel" x="55" y="145" width="1490" height="580" rx="18" />
+  <text class="label" x="90" y="190">Main message flow</text>
+
+  <rect class="box-green" x="90" y="235" width="250" height="135" rx="16" />
+  <circle class="step-circle" cx="122" cy="268" r="18" />
+  <text class="step" x="116" y="275">1</text>
+  <text class="label" x="155" y="275">Sender</text>
+  <text class="body" x="115" y="310">Sends WhatsApp message</text>
+  <text class="code" x="115" y="338">"Bro, are you free?"</text>
+
+  <rect class="box-blue" x="420" y="235" width="250" height="135" rx="16" />
+  <circle class="step-circle" cx="452" cy="268" r="18" />
+  <text class="step" x="446" y="275">2</text>
+  <text class="label" x="485" y="275">WhatsApp Cloud API</text>
+  <text class="body" x="445" y="310">Receives message event</text>
+  <text class="small" x="445" y="338">Forwards webhook to app</text>
+
+  <rect class="box" x="750" y="235" width="250" height="135" rx="16" />
+  <circle class="step-circle" cx="782" cy="268" r="18" />
+  <text class="step" x="776" y="275">3</text>
+  <text class="label" x="815" y="275">Webhook App</text>
+  <text class="body" x="775" y="310">Validates and parses</text>
+  <text class="small" x="775" y="338">/webhook endpoint</text>
+
+  <rect class="box-yellow" x="1080" y="235" width="250" height="135" rx="16" />
+  <circle class="step-circle" cx="1112" cy="268" r="18" />
+  <text class="step" x="1106" y="275">4</text>
+  <text class="label" x="1145" y="275">Safety Check</text>
+  <text class="body" x="1105" y="310">Normal or sensitive?</text>
+  <text class="small" x="1105" y="338">Money, OTP, legal, urgent</text>
+
+  <path class="arrow" d="M340 302 L410 302" />
+  <path class="arrow" d="M670 302 L740 302" />
+  <path class="arrow" d="M1000 302 L1070 302" />
+
+  <rect class="box-blue" x="750" y="465" width="250" height="145" rx="16" />
+  <circle class="step-circle" cx="782" cy="498" r="18" />
+  <text class="step" x="776" y="505">5</text>
+  <text class="label" x="815" y="505">OpenAI</text>
+  <text class="body" x="775" y="540">Writes reply in your tone</text>
+  <text class="small" x="775" y="568">Warm, short, natural</text>
+
+  <rect class="box-green" x="420" y="465" width="250" height="145" rx="16" />
+  <circle class="step-circle" cx="452" cy="498" r="18" />
+  <text class="step" x="446" y="505">6</text>
+  <text class="label" x="485" y="505">Send Reply</text>
+  <text class="body" x="445" y="540">WhatsApp API sends back</text>
+  <text class="code" x="445" y="568">"Yes, give me a bit."</text>
+
+  <rect class="box-red" x="1080" y="465" width="250" height="145" rx="16" />
+  <circle class="step-circle" cx="1112" cy="498" r="18" />
+  <text class="step" x="1104" y="505">5a</text>
+  <text class="label" x="1145" y="505">Human Review</text>
+  <text class="body" x="1105" y="540">Safe acknowledgement only</text>
+  <text class="code" x="1105" y="568">"I'll check properly."</text>
+
+  <path class="arrow-green" d="M1205 370 C1205 430 965 405 910 455" />
+  <path class="arrow-green" d="M750 537 L680 537" />
+  <path class="arrow-green" d="M545 465 C500 420 255 430 215 374" />
+  <path class="arrow-red" d="M1205 370 L1205 455" />
+
+  <rect class="panel" x="55" y="760" width="710" height="165" rx="18" />
+  <text class="label" x="90" y="805">Local testing with ngrok</text>
+  <text class="body" x="90" y="842">Your laptop runs the app on localhost.</text>
+  <text class="body" x="90" y="872">ngrok creates a public HTTPS URL for Meta webhook testing.</text>
+  <text class="code" x="90" y="905">ngrok http 3000 -&gt; https://abc123.ngrok-free.app/webhook</text>
+
+  <rect class="panel" x="835" y="760" width="710" height="165" rx="18" />
+  <text class="label" x="870" y="805">Production on AWS</text>
+  <text class="body" x="870" y="842">API Gateway provides the public webhook URL.</text>
+  <text class="body" x="870" y="872">Lambda runs the reply agent without an always-on server.</text>
+  <text class="code" x="870" y="905">https://api-id.execute-api.region.amazonaws.com/webhook</text>
+
+  <rect class="box-gray" x="1365" y="235" width="140" height="375" rx="16" />
+  <text class="label" x="1393" y="275">Config</text>
+  <text class="code" x="1388" y="315">OPENAI</text>
+  <text class="code" x="1388" y="342">API_KEY</text>
+  <text class="code" x="1388" y="382">WA_TOKEN</text>
+  <text class="code" x="1388" y="422">PHONE_ID</text>
+  <text class="code" x="1388" y="462">VERIFY</text>
+  <text class="code" x="1388" y="489">TOKEN</text>
+  <text class="code" x="1388" y="529">DRY_RUN</text>
+  <path class="arrow dashed" d="M1365 422 L1338 422" />
+
+  <text class="small" x="90" y="690">Safe default: keep DRY_RUN=true until local/ngrok and AWS tests are working. Then set DRY_RUN=false to send real replies.</text>
+</svg>

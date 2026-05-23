@@ -10,6 +10,8 @@ Use this section to jump to the right guide.
 
 | Need | Document |
 | --- | --- |
+| See the visual workflow image | [Visual overview](docs/VISUAL_OVERVIEW.md) |
+| See real-time individual and group examples | [Real-time examples](docs/REALTIME_EXAMPLES.md) |
 | Understand what this app does | [Use cases](docs/USE_CASES.md) |
 | Product requirements and roadmap | [PRD](docs/PRD.md) |
 | Run the project locally | [Local run guide](docs/LOCAL_RUN_GUIDE.md) |
@@ -28,7 +30,25 @@ Use this section to jump to the right guide.
 - Uses careful fallback replies when the message needs human attention.
 - Runs locally with Node.js or as an AWS Lambda handler.
 
+## Real-Time Examples
+
+Individual normal message:
+
+![Individual normal chat flow](docs/assets/realtime-individual-normal.svg)
+
+Individual sensitive message:
+
+![Individual sensitive chat flow](docs/assets/realtime-individual-sensitive.svg)
+
+Group chat behavior:
+
+![Group chat behavior flow](docs/assets/realtime-group-behavior.svg)
+
+For exact scenarios and reply examples, read [Real-time examples](docs/REALTIME_EXAMPLES.md).
+
 ## Architecture
+
+![WhatsApp Reply Agent Flow](docs/assets/whatsapp-agent-flow.svg)
 
 ```mermaid
 flowchart LR
@@ -121,6 +141,12 @@ npm start
 - `src/agent/replyAgent.js` - OpenAI Responses API call.
 - `src/whatsapp/webhook.js` - Meta webhook parsing.
 - `src/whatsapp/client.js` - WhatsApp Cloud API sender.
+- `docs/VISUAL_OVERVIEW.md` - visual explanation of how the app works.
+- `docs/assets/whatsapp-agent-flow.svg` - README workflow image.
+- `docs/REALTIME_EXAMPLES.md` - real-time individual and group behavior examples.
+- `docs/assets/realtime-individual-normal.svg` - individual normal chat example image.
+- `docs/assets/realtime-individual-sensitive.svg` - individual sensitive chat example image.
+- `docs/assets/realtime-group-behavior.svg` - group behavior example image.
 - `docs/PRD.md` - step-by-step product plan.
 - `docs/SETUP.md` - account, key, and deployment setup.
 - `docs/LOCAL_RUN_GUIDE.md` - exact local commands for running and testing.
