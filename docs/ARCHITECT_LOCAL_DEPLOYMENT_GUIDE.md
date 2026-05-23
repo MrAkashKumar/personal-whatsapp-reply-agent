@@ -57,7 +57,11 @@ With `DRY_RUN=true`, the app logs replies but does not send real WhatsApp messag
 
 ## 3. Local Setup Overview
 
-![Cross-platform local setup](assets/cross-platform-local-setup.svg)
+![Cross-platform local setup](assets/cross-platform-local-setup.png)
+
+Source SVG:
+
+[cross-platform-local-setup.svg](assets/cross-platform-local-setup.svg)
 
 The runtime is the same on all operating systems:
 

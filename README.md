@@ -21,6 +21,125 @@ Use this section to jump to the right guide.
 | Deploy to AWS Lambda and API Gateway | [AWS deployment guide](docs/AWS_DEPLOYMENT.md) |
 | General setup notes | [Setup guide](docs/SETUP.md) |
 
+## Local Machine Quick Start
+
+Use this section when you want to run the app on your own laptop or desktop first.
+
+### 1. Install Node.js
+
+Install Node.js 20 or newer from [nodejs.org](https://nodejs.org/en/download/).
+
+Check version:
+
+```bash
+node -v
+npm -v
+```
+
+### 2. Open Project Folder
+
+macOS/Linux:
+
+```bash
+cd /Users/akash/Documents/Codex/2026-05-22/write-a-normal-person-are-chatting
+```
+
+Windows PowerShell example:
+
+```powershell
+cd C:\Projects\personal-whatsapp-reply-agent
+```
+
+### 3. Create `.env`
+
+macOS/Linux:
+
+```bash
+cp .env.example .env
+```
+
+Windows PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Open `.env` and add your keys:
+
+```bash
+OPENAI_API_KEY=sk-your-openai-api-key
+WHATSAPP_ACCESS_TOKEN=your-meta-token
+WHATSAPP_PHONE_NUMBER_ID=your-phone-number-id
+WHATSAPP_VERIFY_TOKEN=your-random-verify-token
+DRY_RUN=true
+AUTO_REPLY=true
+```
+
+Keep `DRY_RUN=true` while testing. This logs replies without sending real WhatsApp messages.
+
+### 4. Verify Project
+
+```bash
+npm test
+npm run check
+```
+
+Both commands should pass before you connect WhatsApp.
+
+### 5. Start Local Server
+
+```bash
+npm start
+```
+
+The app runs on:
+
+```text
+http://localhost:3000
+```
+
+### 6. Test Health
+
+Open another terminal.
+
+macOS/Linux:
+
+```bash
+curl http://localhost:3000/health
+```
+
+Windows PowerShell:
+
+```powershell
+Invoke-RestMethod http://localhost:3000/health
+```
+
+Expected result:
+
+```json
+{"ok":true,"dryRun":true,"autoReply":true}
+```
+
+### 7. Test Meta Webhook Locally
+
+To let Meta call your local app, start ngrok:
+
+```bash
+ngrok http 3000
+```
+
+Use the HTTPS URL from ngrok:
+
+```text
+https://your-ngrok-url/webhook
+```
+
+Paste that URL into Meta webhook settings with the same `WHATSAPP_VERIFY_TOKEN`.
+
+Full local guide: [Local run guide](docs/LOCAL_RUN_GUIDE.md)  
+Full ngrok guide: [ngrok guide](docs/NGROK_GUIDE.md)  
+OS-specific guide: [Architect local/deployment guide](docs/ARCHITECT_LOCAL_DEPLOYMENT_GUIDE.md)
+
 ## What This Does
 
 - Receives inbound WhatsApp webhook events.
@@ -55,7 +174,7 @@ Best-fit users:
 
 Cross-platform local setup:
 
-![Cross-platform local setup](docs/assets/cross-platform-local-setup.svg)
+![Cross-platform local setup](docs/assets/cross-platform-local-setup.png)
 
 Local-to-cloud deployment path:
 
@@ -173,7 +292,8 @@ npm start
 - `docs/AWS_DEPLOYMENT.md` - complete AWS Lambda and API Gateway deployment steps.
 - `docs/ARCHITECT_LOCAL_DEPLOYMENT_GUIDE.md` - best users, OS-specific local setup, and deployment path.
 - `docs/assets/audience-fit.svg` - best-fit user image.
-- `docs/assets/cross-platform-local-setup.svg` - macOS, Windows, Linux setup image.
+- `docs/assets/cross-platform-local-setup.png` - macOS, Windows, Linux setup image for README preview.
+- `docs/assets/cross-platform-local-setup.svg` - editable macOS, Windows, Linux setup image source.
 - `docs/assets/local-to-cloud-path.svg` - local-to-AWS deployment image.
 
 ## Compliance Notes

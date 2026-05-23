@@ -32,7 +32,7 @@
   <text class="label" x="110" y="212">macOS</text>
   <text class="body" x="110" y="252">Install Node.js 20+ from nodejs.org</text>
   <text class="body" x="110" y="285">or use Homebrew if you already use it.</text>
-  <text class="code" x="110" y="322">node -v && npm -v</text>
+  <text class="code" x="110" y="322">node -v &amp;&amp; npm -v</text>
 
   <rect class="win" x="572" y="160" width="455" height="185" rx="20" />
   <text class="label" x="612" y="212">Windows</text>
@@ -44,7 +44,7 @@
   <text class="label" x="1115" y="212">Linux</text>
   <text class="body" x="1115" y="252">Use your distro package manager</text>
   <text class="body" x="1115" y="285">or official Node.js downloads.</text>
-  <text class="code" x="1115" y="322">node -v && npm -v</text>
+  <text class="code" x="1115" y="322">node -v &amp;&amp; npm -v</text>
 
   <rect class="panel" x="70" y="405" width="1460" height="510" rx="22" />
   <text class="label" x="110" y="455">Shared local run sequence</text>
